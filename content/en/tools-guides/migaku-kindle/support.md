@@ -36,7 +36,7 @@ In the meanwhile if are having an issue please reference the [Seeking Support se
 
 ## User's Manual
 
-We have created a detailed <internal-link to="/tools-guides/migaku-kindle/guide">User's Guide for Migaku Kindle</internal-link>. It is recommended that if you are having an issue with a specific feature in the add-on that you reference its relevant section in the User's Manual which may help to resolve your issue.
+We have created a detailed <link to="/tools-guides/migaku-kindle/guide">User's Guide for Migaku Kindle</link>. It is recommended that if you are having an issue with a specific feature in the add-on that you reference its relevant section in the User's Manual which may help to resolve your issue.
 
 ## Seeking Support
 

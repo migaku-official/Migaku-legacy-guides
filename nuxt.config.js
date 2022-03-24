@@ -1,10 +1,15 @@
+import i18n from './i18n'
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
-  router: {
-    base: '/migaku-legacy-guides/',
+  render: {
+    fallback: false,
   },
+
+  // router: {
+  //   base: '/migaku-legacy-guides/',
+  // },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -18,14 +23,20 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: '~/plugins/vue-scroll-reveal', ssr: false }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -40,11 +51,15 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    'nuxt-i18n',
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
+  content: {
+    liveEdit: false,
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+  i18n,
 }
