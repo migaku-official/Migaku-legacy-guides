@@ -59,8 +59,7 @@ export default {
       link.addEventListener('click', (e) => {
         e.preventDefault()
         const href = e.target.getAttribute('href')
-        const isInternalPageLink =
-          href.includes('#') && href.includes('tools-guides')
+        const isInternalPageLink = href.includes('#') && !href.includes('http')
 
         if (isInternalPageLink) {
           document.getElementById(href.replace(/.*#/, '')).scrollIntoView({
